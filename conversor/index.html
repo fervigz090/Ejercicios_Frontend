@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <title>Conversor de monedas</title>
+</head>
+<body>
+    <!--CABECERA-->
+    <header>
+        <img id="logo" src="./img/icon3.png" alt="logo">
+    </header>
+
+    <!--FORMULARIO-->
+    <main>
+        <form action="#" id="formEntrada">
+            <!--Pedimos cantidad de moneda inicial-->
+            <div class="itemform">
+                <label for="cantidad">introduce cantidad</label>
+                <input type="number" name="cantidad" id="cantidad" required>
+            </div>
+            <!--Pedimos tipo de moneda inicial-->
+            <div class="itemform">
+                <label for="monIn">selecciona moneda inicial</label>
+                <select name="monIn" id="monIn" required>
+                    <option value="0">--Elige divisa--</option>
+                    <option value="1">Euro</option>
+                    <option value="2">Dolar</option>
+                    <option value="3">Libra</option>
+                    <option value="4">Rupia indonesia</option>
+                    <option value="5">Yen</option>
+                </select>
+            </div>
+            <!--Pedimos tipo de moneda final-->
+            <div class="itemform">
+                <label for="monOut">selecciona moneda final</label>
+                <select name="monOut" id="monOut" required>
+                    <option value="0">--Elige divisa--</option>
+                    <option value="1">Euro</option>
+                    <option value="2">Dolar</option>
+                    <option value="3">Libra</option>
+                    <option value="4">Rupia indonesia</option>
+                    <option value="5">Yen</option>
+                </select>
+            </div>
+            <!--Resultado-->
+            <div class="itemform">
+                <label for="resultado">Resultado</label>
+                <output type="number" name="resultado" id="resultado"></output>
+            </div>
+            <!--Boton conversion-->
+            <div class="itemform">
+                <input type="submit" value="CONVERTIR" id="convertir">
+            </div>
+        </form>
+    </main>
+    <!--PIE DE PAGINA-->
+    <footer>
+        <p>Conversor de monedas</p>
+        <p id="link"><a href="https://www.flaticon.com/free-icons/currency" title="currency icons">Currency icons created by Freepik - Flaticon</a></p>
+    </footer>
+
+    <script src="./js/app.js"></script>
+</body>
+</html>
