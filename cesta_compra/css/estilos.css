@@ -15,19 +15,21 @@ header, footer{
 }
 
 footer{
-    margin-top: 60px;
+    margin-top: 300px;
 }
 
 main{
     color: #261E10;
-    height: 10px;
+    height: 200px;
     padding-top: 20px;
     padding-bottom: 50px;
     margin: 20px 15px 20px 15px;
     justify-content: center;
+    align-items: center;
 }
 
 .producto{
+    width: 50;
     align-items: center;
     text-align: center;
     display: flex;
@@ -46,12 +48,16 @@ main{
 }
 
 .preciounitario{
-    font-size: large;
-    font-weight: 300;
+    margin-left: 10px;
+    font-size: larger;
+    font-weight:bold;
 }
 
 #itemgrid{
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
+    display:grid;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 30px;
 }
