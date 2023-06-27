@@ -1,0 +1,57 @@
+
+body{
+    width: 600;
+    background-color: #D9C8B4;
+    color: #7775BF;
+    margin: 15px 15px 15px 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header, footer{
+    text-align: center;
+    align-items: center;
+    font-size: 18px;
+    margin: 30px 15px 10px 15px;
+}
+
+footer{
+    margin-top: 60px;
+}
+
+main{
+    color: #261E10;
+    height: 10px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    margin: 20px 15px 20px 15px;
+    justify-content: center;
+}
+
+.producto{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 1px #BF3B3B;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.imgproducto{
+   margin-right: 10px;
+   margin-left: 10px;
+   float: left;
+}
+
+.preciounitario{
+    font-size: large;
+    font-weight: 300;
+}
+
+#itemgrid{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
