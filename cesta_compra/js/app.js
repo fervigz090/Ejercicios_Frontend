@@ -2,6 +2,7 @@
  * JS para dar funcionalidad a la cesta de compra
  * 
  * @author Iván Fernández Rodríguez <ivanfdez@live.com>
+ * @link https://github.com/fervigz090/Ejercicios_Frontend.git
  * @date 2023-06-29
  */
 
