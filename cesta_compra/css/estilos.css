@@ -53,6 +53,17 @@ main{
     font-weight:bold;
 }
 
+.cestaItem{
+    width: 100;
+    justify-content: center;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    
+}
+
 #itemgrid{
     display:grid;
     justify-content:center;
