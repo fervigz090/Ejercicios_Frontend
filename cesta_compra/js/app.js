@@ -1,46 +1,90 @@
-
+/**
+ * JS para dar funcionalidad a la cesta de compra
+ * 
+ * @author Iván Fernández Rodríguez <ivanfdez@live.com>
+ * @date 2023-06-29
+ */
 
 var itemImg;
 var productItems;
 var cestaCont;
 var precioTotal = 0;
-var precioHD = 0;
-var precioRAM = 0;
-var precioProc = 0;
-var precioMon = 0;
-var precioTar = 0;
-var precioKey = 0;
-var precioMouse = 0;
-var precioAlt = 0;
+var precioHD = 200;
+var precioRAM = 340;
+var precioProc = 540;
+var precioMon = 260;
+var precioTar = 130;
+var precioKey = 200;
+var precioMouse = 120;
+var precioAlt = 170;
+var resultado;
 
-function moviendoImg(event){
+/**
+ * Controlador de eventos que se inicia cuando se arratra un producto.
+ * @date 2023-06-29
+ * @param { * } event evento arrastrar imagen producto.
+ */
+function moviendoImg(event) {
     itemImg = event.target;
-    console.log(itemImg.src);
 }
 
-function anadirProducto(event){
-    precioTotal = precioTotal + precioHD;
-    console.log(event.src);
-    return precioTotal;
+/**
+ * Actualiza el precio total sumando el del nuevo producto añadido/
+ * @date 2023-06-29
+ * @param { * } event soltar producto en cesta
+ */
+function anadirProducto(event) {
+    event.preventDefault(); // Evita que el evento 'drop' realice la acción por defecto
+    var coste = 0;
+    
+    switch (itemImg.alt) {
+        case "hard disk":
+            coste = precioHD;
+            break;
+        case "RAM":
+            coste = precioRAM;
+            break;
+        case "procesador":
+            coste = precioProc;
+            break;
+        case "pantalla":
+            coste = precioMon;
+            break;
+        case "tarjeta red":
+            coste = precioTar;
+            break;
+        case "teclado":
+            coste = precioKey;
+            break;
+        case "raton":
+            coste = precioMouse;
+            break;
+        case "altavoces":
+            coste = precioAlt;
+            break;
+        default:
+            break;
+    }
+    
+    precioTotal += coste; // Suma el costo del producto al precio total
+    resultado.textContent = "Total: " + precioTotal + "€"; // Actualiza el contenido de 'resultado' con el precio total acumulado
 }
 
-function domCargado(){
-    precioHD = document.getElementById('precioHD');
-    precioRAM = document.getElementById('precioRAM');
-    precioProc = document.getElementById('precioProc');
-    precioMon = document.getElementById('precioMon');
-    precioTar = document.getElementById('precioTar');
-    precioKey = document.getElementById('precioKey');
-    precioMouse = document.getElementById('precioMouse');
-    precioAlt = document.getElementById('precioAlt');
+/**
+ * Carga de objetos
+ * @date 2023-06-29
+ */
+function domCargado() {
     productItems = document.getElementsByClassName('imgproducto');
-    for (let item of productItems){
+    resultado = document.getElementById('preciototal');
+    for (let item of productItems) {
         item.addEventListener('dragstart', moviendoImg);
     }
     cestaCont = document.getElementById('cestaItem');
-    cestaCont.addEventListener('dragover', e=>{e.preventDefault()});
+    cestaCont.addEventListener('dragover', event => { event.preventDefault(); });
     cestaCont.addEventListener('drop', anadirProducto);
-
 }
 
 document.addEventListener('DOMContentLoaded', domCargado);
+
+

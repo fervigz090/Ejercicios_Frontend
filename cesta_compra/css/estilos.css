@@ -1,74 +1,99 @@
-
-body{
-    width: 600;
-    background-color: #D9C8B4;
-    color: #7775BF;
-    margin: 15px 15px 15px 15px;
+body {
+    background-color: #000000;
+    color: #ffffff;
     font-family: 'Courier New', Courier, monospace;
-}
-
-header, footer{
+  }
+  
+  header, footer {
     text-align: center;
-    align-items: center;
     font-size: 18px;
-    margin: 30px 15px 10px 15px;
-}
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+  }
 
-footer{
-    margin-top: 300px;
-}
+  main {
+    background-color: #1F0802;
+    padding: 20px;
+    border-radius: 10px;
+  }
 
-main{
-    color: #261E10;
-    height: 200px;
-    padding-top: 20px;
-    padding-bottom: 50px;
-    margin: 20px 15px 20px 15px;
-    justify-content: center;
-    align-items: center;
-}
-
-.producto{
-    width: 50;
-    align-items: center;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    border: solid 1px #BF3B3B;
-    border-radius: 5px;
-    padding: 5px 5px 5px 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.imgproducto{
-   margin-right: 10px;
-   margin-left: 10px;
-   float: left;
-}
-
-.preciounitario{
+  footer {
+    margin-top: 50px;
+    color: #ffffff;
+    font-size: 14px;
+  }
+  
+  /* Estilos adicionales para lograr un aspecto retro-espacial */
+  
+  body {
+    background-image: url('../img/space-backgroud.jpg');
+    background-repeat: no-repeat;
+    background-size: 100;
+    background-position: center;
+  }
+  
+  .producto {
+    background-color: #38184C;
+    border: solid 1px #CEF09D;
+  }
+  
+  .imgproducto {
+    margin-right: 10px;
+    margin-left: 10px;
+    float: left;
+  }
+  
+  .preciounitario {
     margin-left: 10px;
     font-size: larger;
-    font-weight:bold;
-}
+    font-weight: bold;
+    color: #A0CD60;
+  }
 
-.cestaItem{
-    width: 100;
-    justify-content: center;
-    display: flex;
-    column-gap: 10px;
+  .main {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .cestaImgItem {
+    width: 50px;
+    height: 50px;
+    filter: invert(1);
+  }
+
+  .imgproducto {
+    filter: invert(1);
+  }
+
+  .producto {
+    box-shadow: 0px 0px 5px rgb(198, 135, 239);
+    flex: 0 0 calc(25% - 10px); /* Establece el ancho del bloque */
+    border: solid 1px #BF3B3B;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 20px; /* Agrega un margen inferior para separar los bloques */
+    box-sizing: border-box; /* Incluye el borde y el relleno en el ancho total */
+  }
+  
+  #cestaItem {
+    display: inline-block;
     align-items: center;
-    flex-wrap: wrap;
     text-align: center;
+    gap: 10px;
+    margin-top: 20px;
     
-}
+  }
+  
+  #preciototal {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+  }
 
-#itemgrid{
-    display:grid;
-    justify-content:center;
-    align-items: center;
+  #itemgrid {
+    display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 30px;
-}
+  }
+  
