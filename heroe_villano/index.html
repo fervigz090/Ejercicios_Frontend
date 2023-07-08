@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <title>Heroe y Villano</title>
+</head>
+<body>
+    <header>
+        <img src="./img/icono_cabecera.png" alt="">
+    </header>
+    <main>
+        <form action="juego.html">
+            <!--Pedimos nick-->
+            <div class="itemform">
+                <label for="nick">introduce tu nick*</label>
+                <input type="text" name="nick" value="@" id="nicka" readonly>
+                <input type="text" name="nick" id="nick" required minlength="2">
+            </div>
+            <!--Dificultad del juego-->
+            <div class="itemform">
+                <label for="dificultad">nivel de dificultad</label>
+                <select name="dificultad" id="dificultad">
+                    <option value="0">-- Elige dificultad --</option>
+                    <option value="1">baja</option>
+                    <option value="2">media</option>
+                    <option value="3">alta</option>
+                </select>
+            </div>
+            <!--Numero de tarjetas-->
+            <div class="itemform">
+                <label for="numTarjetas">numero de tarjetas</label>
+                <select name="numTarjetas" id="numTarjetas">
+                    <option value="0">-- Elige número de tarjetas --</option>
+                    <option value="3">9</option>
+                    <option value="4">16</option>
+                    <option value="5">25</option>
+                </select>
+            </div>
+            <!--Avatar-->
+            <div class="itemform">
+                <div id="avatar">
+                    <label for="avatar">avatar</label>
+                    <div id="avatarContainer">
+                        <img src="./img/maggie.png" alt="" id="avatarImg">
+                    </div>
+                </div>
+                <div id="avatarGrid">
+                    <div class="avatarItem">
+                        <img src="./img/bart.png" class="avatarImgItem" alt="" width="35" draggable="true">
+                    </div>
+                    <div class="avatarItem">
+                        <img src="./img/homer.png" class="avatarImgItem" alt="" width="35" draggable="true">
+                    </div>
+                    <div class="avatarItem">
+                        <img src="./img/lisa.png" class="avatarImgItem" alt="" width="35" draggable="true">
+                    </div>
+                    <div class="avatarItem">
+                        <img src="./img/marge.png" class="avatarImgItem" alt="" width="35" draggable="true">
+                    </div>
+                    <div class="avatarItem">
+                        <img src="./img/maggie.png" class="avatarImgItem" alt="" width="35" draggable="true">
+                    </div>
+                    <div class="avatarItem">
+                        <img src="./img/santaslittlehelper.png" class="avatarImgItem" alt="" width="35" draggable="true">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
